@@ -15,11 +15,11 @@ const db = knex({
   client: 'pg',
   connection: {
     connectionString: process.env.DATABASE_URL,
-    ssl: true
+    ssl: true,
   }
 });
 
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || 3000;
 const app = express();
 
 app.listen(port, () => console.log(`app is running on port ${port}`))
